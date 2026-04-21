@@ -210,7 +210,7 @@ def check_machine_account_quota(domains, flags):
         )
 
         # Debug line (temporary)
-        print("DEBUG:", domain_name, quota)
+        # print("DEBUG:", domain_name, quota)
 
         if quota > 0:
 
@@ -259,7 +259,7 @@ def check_outdated_os(computers, flags):
         if not os_name:
             continue
 
-        print(f"DEBUG: {computer_name} - {os_name}")
+        # print(f"DEBUG: {computer_name} - {os_name}")
 
         # Check partial match
         for outdated in outdated_versions:
@@ -285,8 +285,8 @@ def main():
     computers = load_json_by_type("computers")
     domains = load_json_by_type("domains")
 
-    print("DEBUG domains length:", len(domains))
-    print("DEBUG domains first item:", domains[0])
+    # print("DEBUG domains length:", len(domains))
+    # print("DEBUG domains first item:", domains[0])
 
     print(f"Loaded {len(users)} users")
     print(f"Loaded {len(computers)} computers")
@@ -325,6 +325,7 @@ if __name__ == "__main__":
     main()
                       
 ```
+
 </details>
 
 ---
