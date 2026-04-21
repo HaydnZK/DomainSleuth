@@ -84,8 +84,10 @@ nano SleuthHound.py
 ```
 
 2. **Populate the File**: Simply add the following script to your new file:
+
 <details>
 <summary>Click to expand SleuthHound.py Source Code</summary>
+  
 ```python
 import json
 import os
