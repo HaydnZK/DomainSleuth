@@ -326,5 +326,8 @@ if __name__ == "__main__":
                       
 ```
 </details>
+
+---
+
 ## Disclaimer
 SleuthHound is intended for authorized security auditing, educational research, and lawful operations only. Unauthorized access to computer systems is illegal. The developers of this tool do not condone or encourage any unlawful use of this script and are not responsible for any misuse or damage caused by this tool. Use responsibly and only on systems you have explicit permission to audit.
