@@ -1,6 +1,16 @@
 # DomainSleuth: SleuthHound
 This component of DomainSleuth is the automated logic engine that parses through data for misconfigurations. SleuthHound is designed to ingest SharpHound JSON data and identify specific, high-impact AD misconfigurations that can lead to privilege escalation, or even domain compromise. 
 
+## Hashes
+For those who opts to download the file rather than populating their own:
+- **`SleuthHound.py` SHA256**: f894f2f4535201fa49d5c33dfffcf6df536ffaa6a2dfd988cd32a9c8586a2f3e
+- **`SleuthHound.py` MD5**: 4f6072b43e99f121187aa731b8ef80bf
+
+### Integrity Verification
+To verify the integrity of the download, simply run:
+- **Windows**: CertUtil -hashfile SleuthHound.py SHA256
+- **Linux/Mac**: shasum -a 256 SleuthHound.py
+
 ## Features & Detections
 The current version of the script identifies the following vulnerabilities:
 - **AS-REP Roasting**: Users that have `dontreqpreauth` set to True.
