@@ -1,0 +1,20 @@
+[
+  {
+    "title": "AS-REP Roastable User",
+    "type": "ASREP",
+    "severity": "High",
+    "confidence": "Medium",
+    "mitre": "T1558.004",
+    "exploitability": "Moderate",
+    "description": "Kerberos pre-authentication is disabled on this account.",
+    "impact": "Allows offline password cracking and potential account compromise.",
+    "fixes": [
+      "Enable Kerberos pre-authentication for the account.",
+      "Identify and review accounts with this setting enabled.",
+      "Enforce strong password policies."
+    ],
+    "related_nodes": [
+      "admin"
+    ]
+  }
+]
