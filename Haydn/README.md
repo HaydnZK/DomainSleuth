@@ -3,8 +3,8 @@ This component of DomainSleuth is the automated logic engine that parses through
 
 ## Hashes
 For those who opts to download the file rather than populating their own:
-- **`SleuthHound.py` SHA256**: f894f2f4535201fa49d5c33dfffcf6df536ffaa6a2dfd988cd32a9c8586a2f3e
-- **`SleuthHound.py` MD5**: 4f6072b43e99f121187aa731b8ef80bf
+- **`SleuthHound.py` SHA256**: 0b766652a5ee613c327baa507d0a464c93175df2befbf6e01e0eeb69dd4ea31b
+- **`SleuthHound.py` MD5**: bf95d0b06b62e99a44c229e37923fc4a
 
 ### Integrity Verification
 To verify the integrity of the download, simply run:
@@ -326,12 +326,20 @@ def main():
     # --- Run Outdated OS Check ---
     check_outdated_os(computers, outdated_flags)
 
+    # --- Combined Flag File ---
+    all_flags = excessive_flags + asrep_flags + delegation_flags + machine_flags + outdated_flags
+
     # --- Save results to separate files ---
     save_flags(excessive_flags, "excessive_permissions.json")
     save_flags(asrep_flags, "asrep_roasting.json")
     save_flags(delegation_flags, "unconstrained_delegation.json")
-    save_flags(machine_flags, filename="machine_account_quota.json")
+    save_flags(machine_flags, "machine_account_quota.json")
     save_flags(outdated_flags, "outdated_os.json")
+
+    # --- Save the master file ---
+    save_flags(all_flags, "flags.json")
+    
+    print(f"Total vulnerabilities identified: {len(all_flags)}")
 
 if __name__ == "__main__":
     main()
