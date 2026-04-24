@@ -8,8 +8,8 @@ For those who opts to download the file rather than populating their own:
 
 ### Integrity Verification
 To verify the integrity of the download, simply run:
-- **Windows**: CertUtil -hashfile SleuthHound.py SHA256
-- **Linux/Mac**: shasum -a 256 SleuthHound.py
+- **Windows**: `CertUtil -hashfile SleuthHound.py SHA256`
+- **Linux/Mac**: `shasum -a 256 SleuthHound.py`
 
 ## Features & Detections
 The current version of the script identifies the following vulnerabilities:
