@@ -348,10 +348,6 @@ if __name__ == "__main__":
 
 </details>
 
-With your newly populated file and your SharpHound data extracted & in the input folder, now you simply run:
-```
-python3 SleuthHound.py
-```
 
 ---
 
