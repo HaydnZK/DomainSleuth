@@ -1,4 +1,4 @@
-# DomainSleuth Remediation & Reporting Engine #
+# DomainSleuth: Remediation & Reporting Engine #
 **Introduction**  
         This function of the platform focuses on building a remediation and reporting engine that is able to transform security findings into actionable intelligence. The goal was to detect misconfigurations and vulnerabilities within an Active Directory environment, and contextualize them in terms of risk, exploitability, and impact. The final output is a structured PDF report that presents prioritized remediation guidance and highlights potential attack paths leading to domain compromise.  
 
