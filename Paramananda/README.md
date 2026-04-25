@@ -62,7 +62,7 @@ nmap -sC -sV 10.49.181.77
 | 5985 | WinRM | PowerShell remoting |
 
 **What this tells us:**  
-All classic signs of a Domain Controller. Kerberos on 88 immediately signals potential for AS-REP Roasting. SMB on 445 with signing enabled is noted — no SMB relay possible, but share access is still viable.
+All classic signs of a Domain Controller. Kerberos on 88 immediately signals potential for AS-REP Roasting. SMB on 445 with signing enabled is noted — no SMB relay possible, but share access is still feasible.
 
 ---
 
