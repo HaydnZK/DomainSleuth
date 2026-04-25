@@ -1,6 +1,6 @@
 # DomainSleuth Remediation & Reporting Engine #
 **Introduction**  
-        This code focuses on building a remediation and reporting engine that is able to transform security findings into actionable intelligence. The goal was to detect misconfigurations and vulnerabilities within an Active Directory environment, and contextualize them in terms of risk, exploitability, and impact. The final output is a structured PDF report that presents prioritized remediation guidance and highlights potential attack paths leading to domain compromise.  
+        This function of the platform focuses on building a remediation and reporting engine that is able to transform security findings into actionable intelligence. The goal was to detect misconfigurations and vulnerabilities within an Active Directory environment, and contextualize them in terms of risk, exploitability, and impact. The final output is a structured PDF report that presents prioritized remediation guidance and highlights potential attack paths leading to domain compromise.  
 
 **Research and Remediation Logic**  
 The remediation logic was designed based on common Active Directory attack techniques and defensive best practices. Each finding type was mapped to:  
@@ -21,7 +21,7 @@ The remediation logic was designed based on common Active Directory attack techn
 
 **Attack Path Analysis**  
 A key feature is its ability to interpret and explain attack paths. Attack paths are sequences of relationships that an attacker could exploit to escalate privileges.
-The system\code:  
+The function:  
 - Accepts user-defined paths (user, service account,  domain admin)  
 - Converts them into step-by-step explanations  
 - Identifies the weakest link in the chain  
@@ -29,7 +29,7 @@ The system\code:
 Additionally, findings are correlated with attack paths to determine how many escalation routes a single vulnerability supports. This enables prioritization based on real impact rather than isolated severity.  
 
 **Risk Scoring Model**  
-        The risk scoring system combines severity weights (Critical, High, Medium) and exploitability factors (Easy, Moderate, Hard). Each finding contributes to an overall score, capped at 100. The model also categorizes overall risk into critical, high, medium, and low.
+        The risk scoring component combines severity weights (Critical, High, Medium) and exploitability factors (Easy, Moderate, Hard). Each finding contributes to an overall score, capped at 100. The model also categorizes overall risk into critical, high, medium, and low.
 Additional features include:  
 - Quick Wins: Identifies fixes that reduce risk the most  
 - Top Priority Fix: Highlights the most impactful issue  
