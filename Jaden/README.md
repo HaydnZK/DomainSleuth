@@ -17,7 +17,10 @@ The remediation logic was designed based on common Active Directory attack techn
 - GenericAll Permissions (Critical) - Full control over objects allows attackers to reset passwords or modify permissions, enabling lateral movement. Remediation would be to remove excessive permissions and enforce least privilege.  
 - Weak Group Configuration (High) - Overly permissive group memberships increase the attack surface and enable privilege escalation. Remediation is an audit and restricted group membership using role-based access control.  
 - Unconstrained Delegation (High) - Allows credential impersonation and Kerberos ticket abuse. Remediation is to replace with a constrained delegation and monitor ticket activity.  
-- Inactive Privileged Accounts (Medium) - Dormant accounts with elevated privileges pose a hidden risk. Remediation is to disable or remove inactive accounts and implement lifecycle management.  
+- Inactive Privileged Accounts (Medium) - Dormant accounts with elevated privileges pose a hidden risk. Remediation is to disable or remove inactive accounts and implement lifecycle management.
+- Attack Path to Domain Admin (Critical) - A sequence of misconfigurations or permissions allows an attacker to escalate privileges from a low-level account to Domain Admin. This represents a direct path to full domain compromise. Remediation is to identify and break the chain by removing unnecessary permissions, restricting access between nodes, and enforcing least privilege across the path.
+- Weak Password Policy (Medium) - Domain password policies that allow short or simple passwords increase susceptibility to brute-force and credential-based attacks. Remediation is to enforce strong password requirements, enable complexity rules, implement password history, and configure account lockout policies.
+  
 
 **Attack Path Analysis**  
 A key feature is its ability to interpret and explain attack paths. Attack paths are sequences of relationships that an attacker could exploit to escalate privileges.
